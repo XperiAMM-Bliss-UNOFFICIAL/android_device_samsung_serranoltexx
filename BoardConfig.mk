@@ -23,6 +23,12 @@
 # Inherit from common serrano
 -include device/samsung/serrano-common/BoardConfigCommon.mk
 
+ # Enable dex-preoptimization to speed up first boot sequence
+ ifeq ($(HOST_OS),linux)
+ WITH_DEXPREOPT := true
+ DONT_DEXPREOPT_PREBUILTS := true
+ endif
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := serranolte,serranoltebmc,serranoltektt,serranoltexx
 
