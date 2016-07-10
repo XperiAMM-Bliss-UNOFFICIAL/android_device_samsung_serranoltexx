@@ -45,3 +45,18 @@ BOARD_HAVE_GENERIC_BLN := true
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_serranolte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_serranolte
+
+# BlissPop Configs
+TARGET_TC_ROM := 4.9-linaro
+TARGET_TC_KERNEL := 4.9-linaro
+BLISSIFY := true
+BLISS_O3 := false
+BLISS_STRICT := false
+BLISS_GRAPHITE := false
+BLISS_KRAIT := true
+BLISS_PIPE := true
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+#SaberMod
+-include vendor/bliss/config/sm.mk
